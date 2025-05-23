@@ -1,8 +1,4 @@
-# Repo to learn Docker with examples. Contributions are most welcome.
-
-## If you found this repo useful, give it a STAR 🌠
-
-You can watch the video version of this repo on my youtube playlist. -> https://www.youtube.com/watch?v=7JZP345yVjw&list=PLdpzxOOAlwvLjb0vTD9BXLOwwLD_GWCmC
+# Repo to learn Docker with examples. Contributions are most welcome
 
 
 ## What is a container ?
@@ -12,8 +8,6 @@ A container is a standard unit of software that packages up code and all its dep
 Ok, let me make it easy !!!
 
 A container is a bundle of Application, Application libraries required to run your application and the minimum system dependencies.
-
-![Screenshot 2023-02-07 at 7 18 10 PM](https://user-images.githubusercontent.com/43399466/217262726-7cabcb5b-074d-45cc-950e-84f7119e7162.png)
 
 
 
@@ -37,12 +31,7 @@ Containers are lightweight because they use a technology called containerization
 
 Let's try to understand this with an example:
 
-Below is the screenshot of official ubuntu base image which you can use for your container. It's just ~ 22 MB, isn't it very small ? on a contrary if you look at official ubuntu VM image it will be close to ~ 2.3 GB. So the container base image is almost 100 times less than VM image.
 
-![Screenshot 2023-02-08 at 3 12 38 PM](https://user-images.githubusercontent.com/43399466/217493284-85411ae0-b283-4475-9729-6b082e35fc7d.png)
-
-
-To provide a better picture of files and folders that containers base images have and files and folders that containers use from host operating system (not 100 percent accurate -> varies from base image to base image). Refer below.
 
 
 
@@ -101,11 +90,9 @@ Docker is a containerization platform that provides easy way to containerize you
 In simple words, you can understand as `containerization is a concept or technology` and `Docker Implements Containerization`.
 
 
-### Docker Architecture ?
 
-![image](https://user-images.githubusercontent.com/43399466/217507877-212d3a60-143a-4a1d-ab79-4bb615cb4622.png)
 
-The above picture, clearly indicates that Docker Deamon is brain of Docker. If Docker Deamon is killed, stops working for some reasons, Docker is brain dead :p (sarcasm intended).
+
 
 ### Docker LifeCycle 
 
@@ -117,7 +104,6 @@ There are three important things,
 2. docker run   -> runs container from docker images
 3. docker push  -> push the container image to public/private regestries to share the docker images.
 
-![Screenshot 2023-02-08 at 4 32 13 PM](https://user-images.githubusercontent.com/43399466/217511949-81f897b2-70ee-41d1-b229-38d0572c54c7.png)
 
 
 
@@ -255,9 +241,11 @@ This message shows that your installation appears to be working correctly.
 ### Clone this repository and move to example folder
 
 ```
-git clone https://github.com/iam-veeramalla/Docker-Zero-to-Hero
+git clone https://github.com/Sivakoppala/Docker-Demo.git
+
 cd  examples
 ```
+
 
 ### Login to Docker [Create an account with https://hub.docker.com/]
 
@@ -267,7 +255,7 @@ docker login
 
 ```
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
-Username: abhishekf5
+Username: sivakoppala
 Password:
 WARNING! Your password will be stored unencrypted in /home/ubuntu/.docker/config.json.
 Configure a credential helper to remove this warning. See
@@ -281,7 +269,7 @@ Login Succeeded
 You need to change the username accoringly in the below command
 
 ```
-docker build -t abhishekf5/my-first-docker-image:latest .
+docker build -t sivakoppala/my-first-docker-image:latest .
 ```
 
 Output of the above command
@@ -324,7 +312,7 @@ Output
 
 ```
 REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
-abhishekf5/my-first-docker-image   latest    960d37536dcd   26 seconds ago   467MB
+sivakoppala/my-first-docker-image   latest    960d37536dcd   26 seconds ago   467MB
 ubuntu                             latest    58db3edaf2be   13 days ago      77.8MB
 hello-world                        latest    feb5d9fea6a5   16 months ago    13.3kB
 ```
@@ -332,7 +320,7 @@ hello-world                        latest    feb5d9fea6a5   16 months ago    13.
 ### Run your First Docker Container
 
 ```
-docker run -it abhishekf5/my-first-docker-image
+docker run -it sivakoppala/my-first-docker-image
 ```
 
 Output
@@ -344,14 +332,14 @@ Hello World
 ### Push the Image to DockerHub and share it with the world
 
 ```
-docker push abhishekf5/my-first-docker-image
+docker push sivakoppala/my-first-docker-image
 ```
 
 Output
 
 ```
 Using default tag: latest
-The push refers to repository [docker.io/abhishekf5/my-first-docker-image]
+The push refers to repository [docker.io/sivakoppala/my-first-docker-image]
 896818320e80: Pushed
 b8088c305a52: Pushed
 69dd4ccec1a0: Pushed
